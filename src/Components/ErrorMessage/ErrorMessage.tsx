@@ -1,8 +1,5 @@
-import { Alert, AlertIcon } from '@chakra-ui/react'
+import { Alert } from '@/components/ui/alert'
 
 export const ErrorMessage = () => (
-  <Alert status="error">
-    <AlertIcon />
-    There was an error processing your request, please try again.
-  </Alert>
+  <Alert status="error">There was an error processing your request, please try again.</Alert>
 )

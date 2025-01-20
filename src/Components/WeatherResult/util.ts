@@ -11,12 +11,12 @@ interface TransformWeatherResponseReturn {
 export const transformWeatherResponse = (
   data: WeatherResponse | undefined,
 ): TransformWeatherResponseReturn => {
-
   // If no data yet return undefined
-  if (!data) return {
-    currentDay: undefined, upcomingDays: undefined
-  }
-
+  if (!data)
+    return {
+      currentDay: undefined,
+      upcomingDays: undefined,
+    }
 
   const currentDay: CurrentWeatherDay = {
     date: data.current.last_updated,
@@ -25,15 +25,15 @@ export const transformWeatherResponse = (
     tempCentigrade: data.current.temp_c,
   }
 
-
   // If no valid upcoming forcasts then return
   if (data.forecast.forecastday.length < 3) {
-    return { 
-      currentDay, upcomingDays: undefined
+    return {
+      currentDay,
+      upcomingDays: undefined,
     }
   }
 
-  const upcomingDays: UpcomingWeatherDay[] =  [
+  const upcomingDays: UpcomingWeatherDay[] = [
     {
       date: data.forecast.forecastday[1].date,
       conditionIcon: data.forecast.forecastday[1].day.condition.icon,

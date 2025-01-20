@@ -1,17 +1,18 @@
-import { Box, ChakraProvider, theme } from '@chakra-ui/react'
-import { QueryClient, QueryClientProvider } from 'react-query'
+import { Box } from '@chakra-ui/react'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
-import React from 'react'
-import { WeatherForcast } from './Components/WeatherForcast'
+import { Provider } from '@/components/ui/provider'
+
+import { WeatherForcast } from '@/components/WeatherForcast'
 
 const queryClient = new QueryClient()
 
 export const App = () => (
-  <ChakraProvider theme={theme}>
+  <Provider>
     <QueryClientProvider client={queryClient}>
       <Box fontSize="xl" margin="10">
         <WeatherForcast />
       </Box>
     </QueryClientProvider>
-  </ChakraProvider>
+  </Provider>
 )

@@ -1,8 +1,8 @@
 import { WeatherResult } from './WeatherResult'
-import { render } from 'test-utils'
-import { rest } from 'msw'
+import { render } from '@/test-utils'
+import { http, HttpResponse } from 'msw'
 import { screen } from '@testing-library/react'
-import { server } from 'mocks/server'
+import { server } from '@/mocks/server'
 
 describe('WeatherResult', () => {
   it('Displays correct forcast for Sydney', async () => {
@@ -26,9 +26,9 @@ describe('WeatherResult', () => {
   })
   it('Displays error state for API error', async () => {
     server.use(
-      rest.get('http://api.weatherapi.com/v1/forecast.json', (req, res, ctx) => {
+      http.get('http://api.weatherapi.com/v1/forecast.json', () => {
         // Simulate 401 error
-        return res.once(ctx.status(401), ctx.json(null))
+        return new HttpResponse(null, { status: 401 })
       }),
     )
     render(<WeatherResult location="Sydney" />)

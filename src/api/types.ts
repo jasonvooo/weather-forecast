@@ -1,4 +1,3 @@
-
 interface WeatherCondition {
   text: string
   icon: string
@@ -15,7 +14,7 @@ export interface WeatherResponse {
       date: string
       day: {
         mintemp_c: number
-        maxtemp_c: number,
+        maxtemp_c: number
         condition: WeatherCondition
       }
     }>

@@ -1,1 +1,1 @@
-export * from "./LoadingSkeleton"
+export * from './LoadingSkeleton'

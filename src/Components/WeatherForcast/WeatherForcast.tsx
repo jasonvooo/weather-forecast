@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 
-import { Box } from '@chakra-ui/layout'
+import { Box } from '@chakra-ui/react'
 import { Heading } from '@chakra-ui/react'
-import { LocationSearch } from 'Components/LocationSearch'
-import { WeatherResult } from 'Components/WeatherResult'
+import { LocationSearch } from '@/components/LocationSearch'
+import { WeatherResult } from '@/components/WeatherResult'
 
 export const WeatherForcast = () => {
   const [selectedLocation, setSelectedLocation] = useState<string>()

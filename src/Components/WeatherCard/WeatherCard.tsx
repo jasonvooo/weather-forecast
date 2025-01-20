@@ -1,6 +1,5 @@
-import { Box, Stat, StatHelpText, StatLabel, StatNumber } from '@chakra-ui/react'
-
-import React from 'react'
+import { StatHelpText, StatLabel, StatValueText, StatRoot } from '@/components/ui/stat'
+import { Box } from '@chakra-ui/react'
 
 interface WeatherCardProps {
   label: string
@@ -12,14 +11,14 @@ interface WeatherCardProps {
 export const WeatherCard = ({ label, value, icon, helpText }: WeatherCardProps) => {
   return (
     <Box borderWidth="1px" borderRadius="lg" padding="3" boxShadow="0 4px 8px 0 rgba(0,0,0,0.2)">
-      <Stat>
+      <StatRoot>
         <StatLabel>{label}</StatLabel>
-        <StatNumber>{value}</StatNumber>
+        <StatValueText>{value}</StatValueText>
         <StatHelpText>
-          <img src={icon} alt={helpText}/>
+          <img src={icon} alt={helpText} />
           {helpText}
         </StatHelpText>
-      </Stat>
+      </StatRoot>
     </Box>
   )
 }

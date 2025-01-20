@@ -1,9 +1,9 @@
-import { Box, Grid, Heading } from '@chakra-ui/layout'
+import { Box, Grid, Heading } from '@chakra-ui/react'
 
-import { ErrorMessage } from 'Components/ErrorMessage'
+import { ErrorMessage } from '@/components/ErrorMessage'
 import { GridItem } from '@chakra-ui/react'
-import { LoadingSkeleton } from 'Components/LoadingSkeleton'
-import { WeatherCard } from 'Components/WeatherCard'
+import { LoadingSkeleton } from '@/components/LoadingSkeleton'
+import { WeatherCard } from '@/components/WeatherCard'
 import { useGetWeather } from './useGetWeather'
 
 interface WeatherResultProps {
