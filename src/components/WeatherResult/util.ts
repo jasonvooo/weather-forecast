@@ -1,6 +1,6 @@
 import { CurrentWeatherDay, UpcomingWeatherDay } from './types'
 
-import { WeatherResponse } from 'api/types'
+import { WeatherResponse } from '@/api/types'
 
 interface TransformWeatherResponseReturn {
   currentDay: CurrentWeatherDay | undefined

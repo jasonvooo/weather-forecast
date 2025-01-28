@@ -1,7 +1,7 @@
-import { WeatherResponse } from 'api/types'
+import { WeatherResponse } from '@/api/types'
 import { transformWeatherResponse } from './util'
 import { useQuery } from '@tanstack/react-query'
-import { weatherForecastUrls } from 'api/weatherForecast'
+import { weatherForecastUrls } from '@/api/weatherForecast'
 
 export const useGetWeather = (location: string) => {
   const { isLoading, isError, error, data } = useQuery<WeatherResponse>({

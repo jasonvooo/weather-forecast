@@ -2,6 +2,7 @@
   "name": "weather-forcast",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@chakra-ui/react": "^3.4.0",
     "@emotion/react": "^11.14.0",
@@ -22,7 +23,7 @@
     "lint:fix": "eslint --fix",
     "prettier": "prettier .",
     "prettier:fix": "prettier . --write",
-    "type-check": "tsc"
+    "typecheck": "tsc"
   },
   "eslintConfig": {
     "extends": "react-app"

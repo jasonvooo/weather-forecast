@@ -1,7 +1,7 @@
 import { AsyncSelect, OptionBase } from 'chakra-react-select'
 
 import debounce from 'lodash.debounce'
-import { weatherForecastUrls } from 'api/weatherForecast'
+import { weatherForecastUrls } from '@/api/weatherForecast'
 import { useCallback } from 'react'
 
 interface LocationSearchProps {
