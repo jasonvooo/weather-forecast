@@ -16,10 +16,8 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "./",
     "paths": {
-      "@/*": ["src/*"],
-      "api/*": ["src/api/*"]
+      "@/*": ["./src/*"]
     }
   },
   "include": ["src", "vite-env.d.ts"]
