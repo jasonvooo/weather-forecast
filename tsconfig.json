@@ -19,8 +19,7 @@
     "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"],
-      "api/*": ["src/api/*"],
-      "Components/*": ["src/components/*"]
+      "api/*": ["src/api/*"]
     }
   },
   "include": ["src", "vite-env.d.ts"]
